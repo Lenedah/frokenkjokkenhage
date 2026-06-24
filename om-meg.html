@@ -5,23 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Om meg | Frøken Kjøkkenhage</title>
   <meta name="description" content="Bli mer kjent med personen bak Frøken Kjøkkenhage." />
-  <link rel="stylesheet" href="stil.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap");
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Lato",sans-serif;background:#fff;color:#111;font-weight:300;line-height:1.7}
+    header{background:#007998;position:sticky;top:0;z-index:100}
+    .nav-inner{padding:16px 24px!important;height:auto!important}
+    .nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo img{height:auto;width:220px;display:block}
+    nav a{font-family:"Lato",sans-serif;font-weight:400;font-size:.8rem;color:#fff;text-decoration:none;margin-left:32px;letter-spacing:.06em;text-transform:uppercase}
+    nav a:hover,nav a.aktiv{opacity:.75}
+    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff}
+    .mobil-meny{display:none;flex-direction:column;background:#007998;padding:8px 24px 16px}
+    .mobil-meny a{font-size:.85rem;color:#fff;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+    .mobil-meny a:last-child{border-bottom:none}
+    .mobil-meny.åpen{display:flex}
+    main{max-width:900px;margin:0 auto;padding:56px 24px 80px}
+    h1{font-family:"Playfair Display",serif;font-size:2.6rem;font-weight:400;color:#007998;line-height:1.2;margin-bottom:16px}
+    p{margin-bottom:16px;font-size:1.05rem}
+    ul{margin:0 0 16px 20px}
+    ul li{margin-bottom:6px;font-size:1.05rem}
+    a{color:#007998}
+    .bilde-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:32px}
+    .bilde-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+    footer{background:#007998;color:#fff;text-align:center;padding:40px 24px;font-size:.85rem}
+    footer a{color:#fff;text-decoration:none;margin:0 8px}
+    footer a:hover{text-decoration:underline}
+    .footer-nav{margin-bottom:12px}
+    @media(max-width:640px){h1{font-size:1.9rem}nav{display:none}.hamburger{display:flex}.bilde-grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
 </head>
 <body>
 
 <header>
   <div class="nav-inner">
-    <a class="logo" href="index.html">
-      <img src="bilder/logo.png" alt="Frøken Kjøkkenhage logo" />
-    </a>
+    <a class="logo" href="index.html"><img src="logo.png" alt="Frøken Kjøkkenhage logo" /></a>
     <nav>
       <a href="om-meg.html" class="aktiv">Om meg</a>
       <a href="arrangementer.html">Arrangementer</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <button class="hamburger" onclick="toggleMeny()" aria-label="Meny">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" onclick="toggleMeny()" aria-label="Meny"><span></span><span></span><span></span></button>
   </div>
   <div class="mobil-meny" id="mobilMeny">
     <a href="om-meg.html">Om meg</a>
@@ -71,6 +96,7 @@
     <a href="om-meg.html">Om meg</a>
     <a href="arrangementer.html">Arrangementer</a>
     <a href="kontakt.html">Kontakt</a>
+    <a href="personvern.html">Personvern</a>
   </div>
   <p>© 2026 – Frøken Kjøkkenhage</p>
 </footer>
