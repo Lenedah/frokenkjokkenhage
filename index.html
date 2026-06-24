@@ -41,7 +41,9 @@
     footer a{color:#fff;text-decoration:none;margin:0 8px}
     footer a:hover{text-decoration:underline}
     .footer-nav{margin-bottom:12px}
-    @media(max-width:640px){h1{font-size:1.9rem}h2{font-size:1.4rem}nav{display:none}.hamburger{display:flex}.bilde-grid{grid-template-columns:repeat(2,1fr)}}
+    .hero-topp{display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start}
+    .hero-bilde{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+    @media(max-width:640px){h1{font-size:1.9rem}h2{font-size:1.4rem}nav{display:none}.hamburger{display:flex}.bilde-grid{grid-template-columns:repeat(2,1fr)}.hero-topp{grid-template-columns:1fr}.hero-bilde{max-width:280px;margin:0 auto}}
   </style>
 </head>
 <body>
@@ -64,19 +66,24 @@
 </header>
 
 <main>
-  <h1>Velkommen til<br>Frøken Kjøkkenhage</h1>
-  <p style="color:#555;font-style:italic;font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:32px">Dyrking på egne premisser</p>
+  <div class="hero-topp">
+    <div>
+      <h1>Velkommen til<br>Frøken Kjøkkenhage</h1>
+      <p style="color:#555;font-style:italic;font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:32px">Dyrking på egne premisser</p>
 
-  <p>Midt i et boligfelt i Haugesund har jeg laget en kjøkkenhage der jeg viser at det er fullt mulig å dyrke hvitløk, urter og grønnsaker – selv med begrenset plass og en travel hverdag.</p>
-  <p>Jeg deler dyrkeglede gjennom:</p>
-  <ul>
-    <li>sosiale medier</li>
-    <li>foredrag</li>
-    <li>kurs</li>
-    <li>småskala urtesalg</li>
-  </ul>
-  <p>Følg meg i sosiale medier for dyrketips og ekte hageengasjement!</p>
-  <p>Ta gjerne <a href="kontakt.html">kontakt</a> ved spørsmål, forespørsler om foredrag eller samarbeid.</p>
+      <p>Midt i et boligfelt i Haugesund har jeg laget en kjøkkenhage der jeg viser at det er fullt mulig å dyrke hvitløk, urter og grønnsaker – selv med begrenset plass og en travel hverdag.</p>
+      <p>Jeg deler dyrkeglede gjennom:</p>
+      <ul>
+        <li>sosiale medier</li>
+        <li>foredrag</li>
+        <li>kurs</li>
+        <li>småskala urtesalg</li>
+      </ul>
+      <p>Følg meg i sosiale medier for dyrketips og ekte hageengasjement!</p>
+      <p>Ta gjerne <a href="kontakt.html">kontakt</a> ved spørsmål, forespørsler om foredrag eller samarbeid.</p>
+    </div>
+    <img src="fk_bilde.jpg" alt="Frøken Kjøkkenhage" class="hero-bilde" />
+  </div>
 
   <hr class="skillelinje" />
 
