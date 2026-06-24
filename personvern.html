@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personvern | Frøken Kjøkkenhage</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap");
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:"Lato",sans-serif;background:#fff;color:#111;font-weight:300;line-height:1.7}
+    header{background:#007998;position:sticky;top:0;z-index:100}
+    .nav-inner{padding:16px 24px!important;height:auto!important}
+    .nav-inner{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo img{height:auto;width:220px;display:block}
+    nav a{font-family:"Lato",sans-serif;font-weight:400;font-size:.8rem;color:#fff;text-decoration:none;margin-left:32px;letter-spacing:.06em;text-transform:uppercase}
+    nav a:hover,nav a.aktiv{opacity:.75}
+    .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff}
+    .mobil-meny{display:none;flex-direction:column;background:#007998;padding:8px 24px 16px}
+    .mobil-meny a{font-size:.85rem;color:#fff;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+    .mobil-meny a:last-child{border-bottom:none}
+    .mobil-meny.åpen{display:flex}
+    main{max-width:700px;margin:0 auto;padding:56px 24px 80px}
+    h1{font-family:"Playfair Display",serif;font-size:2.2rem;font-weight:400;color:#007998;line-height:1.2;margin-bottom:24px}
+    h2{font-family:"Lato",sans-serif;font-weight:700;font-size:.95rem;color:#111;text-transform:uppercase;letter-spacing:.06em;margin-top:32px;margin-bottom:8px}
+    p{margin-bottom:16px;font-size:1.02rem}
+    a{color:#007998}
+    footer{background:#007998;color:#fff;text-align:center;padding:40px 24px;font-size:.85rem}
+    footer a{color:#fff;text-decoration:none;margin:0 8px}
+    footer a:hover{text-decoration:underline}
+    .footer-nav{margin-bottom:12px}
+    @media(max-width:640px){h1{font-size:1.7rem}nav{display:none}.hamburger{display:flex}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><img src="logo.png" alt="Frøken Kjøkkenhage logo" /></a>
+    <nav>
+      <a href="om-meg.html">Om meg</a>
+      <a href="arrangementer.html">Arrangementer</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMeny()" aria-label="Meny"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobil-meny" id="mobilMeny">
+    <a href="om-meg.html">Om meg</a>
+    <a href="arrangementer.html">Arrangementer</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</header>
+
+<main>
+  <h1>Personvern</h1>
+
+  <p>Denne nettsiden samler ikke inn personopplysninger gjennom skjemaer, analyseverktøy eller informasjonskapsler (cookies).</p>
+
+  <h2>Skrifttyper (Google Fonts)</h2>
+  <p>Siden bruker skrifttypene Playfair Display og Lato fra Google Fonts. Når du besøker siden, sendes IP-adressen din til Google for å laste ned skrifttypene. Dette skjer automatisk i nettleseren og er ikke noe vi selv lagrer eller har tilgang til.</p>
+
+  <h2>Kontakt</h2>
+  <p>Har du spørsmål om personvern på denne siden, kan du ta <a href="kontakt.html">kontakt</a> med oss.</p>
+</main>
+
+<footer>
+  <div class="footer-nav">
+    <a href="index.html">Forside</a>
+    <a href="om-meg.html">Om meg</a>
+    <a href="arrangementer.html">Arrangementer</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="personvern.html">Personvern</a>
+  </div>
+  <p>© 2026 – Frøken Kjøkkenhage</p>
+</footer>
+
+<script>function toggleMeny(){document.getElementById("mobilMeny").classList.toggle("åpen")}</script>
+</body>
+</html>
