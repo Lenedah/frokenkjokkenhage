@@ -28,11 +28,10 @@
     ul li{margin-bottom:6px;font-size:1.05rem}
     a{color:#007998}
 
-    /* Ny: intro-tekst og portrettbilde side ved side */
-    .intro-wrap{display:flex;gap:32px;align-items:flex-start;margin-bottom:8px}
-    .intro-tekst{flex:1 1 55%}
-    .intro-bilde{flex:1 1 35%;max-width:320px}
+    /* Ny: portrettbilde flyter til høyre, tekst flyter rundt */
+    .intro-bilde{float:right;width:38%;max-width:340px;margin:0 0 16px 32px}
     .intro-bilde img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+    .intro-wrap::after{content:"";display:block;clear:both}
 
     .bilde-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:32px}
     .bilde-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
@@ -45,8 +44,7 @@
       nav{display:none}
       .hamburger{display:flex}
       .bilde-grid{grid-template-columns:repeat(2,1fr)}
-      .intro-wrap{flex-direction:column}
-      .intro-bilde{max-width:none}
+      .intro-bilde{float:none;width:100%;max-width:none;margin:0 0 16px 0}
     }
   </style>
 </head>
@@ -83,9 +81,9 @@
     <div class="intro-bilde">
       <img src="portrett_lok.jpg" alt="Frøken Kjøkkenhage holder frem løk fra hagen" />
     </div>
-  </div>
 
-  <p>Gjennom sosiale medier har jeg funnet et godt miljø der jeg har lært mye og fått nye bekjentskaper. I dag bruker jeg sosiale medier, foredrag og kurs til å vise hvordan alle – uansett erfaring og plass – kan komme i gang med å dyrke sin egen mat.</p>
+    <p>Gjennom sosiale medier har jeg funnet et godt miljø der jeg har lært mye og fått nye bekjentskaper. I dag bruker jeg sosiale medier, foredrag og kurs til å vise hvordan alle – uansett erfaring og plass – kan komme i gang med å dyrke sin egen mat.</p>
+  </div>
 
   <p>For meg handler dyrking om mer enn avling – det handler om:</p>
   <ul>
